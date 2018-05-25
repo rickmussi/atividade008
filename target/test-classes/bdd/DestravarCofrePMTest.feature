@@ -17,7 +17,7 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: como usuário 	eu quero destravar cofre
+Feature: como usuário eu quero destravar cofre
   
 
   @tag1

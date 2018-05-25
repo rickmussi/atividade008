@@ -17,7 +17,7 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: como usuário 	eu quero destravar cofre
+Feature: como usuário eu quero destravar cofre
   
 
   @tag1
@@ -42,7 +42,7 @@ Feature: como usuário 	eu quero destravar cofre
      
   @tag4
   Scenario: entre com a senha 
-    Given entrei com o numero 193566
+    Given entrei com o numero 0
     When ao pressionar numero
     Then verifica se porta fechada
      And diplay 0            
