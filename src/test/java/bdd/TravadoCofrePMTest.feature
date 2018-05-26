@@ -17,29 +17,32 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: como usuário quero travar o cofre
+Feature: como usuário quero destravar o cofre travado
 
   @tag1
   Scenario: pressionar numero
     Given entrei com o numero 123456
-    When eu precionei destravar
-    Then senha errada. tente novamente
-
+    When eu precionei o destravar
+    Then o resultado deve ser tente novamente
+    And a mensagem "senha errada. Tente novamente" deve aparecer
+    
   @tag2
   Scenario: pressionar numero
     Given entrei com o numero 1
-    When eu precionei destravar
-    Then senha errada. tente novamente
+    When eu precionei o destravar
+    Then o resultado deve ser tente novamente
+    And a mensagem "senha errada. Tente novamente" deve aparecer
 
   @tag3
   Scenario: pressionar numero
     Given entrei com o numero 11
-    When eu precionei destravar
-    Then senha errada. tente novamente`
+    When eu precionei o destravar
+    Then o resultado deve ser tente novamente
+    And a mensagem "senha errada. Tente novamente" deve aparecer    
     
   @tag4
   Scenario: pressionar numero
     Given entrei com o numero 123466
-    When eu precionei destravar
-    Then senha correta. Cofre aberto
-    And  chamar destravar   
+    When eu precionei o destravar
+    Then cofre sera aberto
+    And  a mansagem "senha correta. Cofre aberto" deve aparecer   

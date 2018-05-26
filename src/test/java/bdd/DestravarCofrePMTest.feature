@@ -21,50 +21,79 @@ Feature: como usuário eu quero destravar cofre
   
 
   @tag1
-  Scenario: pressionar numero 
-    Given entrei com o numero 193566
+  Scenario: porta nao fechada
+    Given entrei com numero 1
     When eu pressionei destravar
-    Then porta destravada
+    Then verifica porta
+    And  mensagem "Feche a porta antes de digitar a senha" deve aparecer   
+
 
   @tag2
-  Scenario: limpe o display 
-    Given entrei com o texto ""
-    When eu pressionei limpar
-    Then display limpo    
-    
-  @tag3
-  Scenario: teste porta nao fechada 
-    Given entrei com o numero 193566
-    When ao digitar senha
-    Then verificar se a porta esta aberta
-     And feche a porta antes de digitar a senha
-
+  Scenario: digite numero com a porta fechada
+    Given entrei com numero 1
+    When eu pressionei destravar
+    Then verifica porta fechada
+    And  mensagem "0" deve aparecer   
+        
+  @tag3 
+  Scenario: teste gravar senha valida porta fechada destravada 
+    Given entrei com numero 193566
+    When eu pressionei destravar
+    Then verifica se porta fechada e destravada
+     And mensagem "Senha salva. Cofre trancado" deve aparecer           
      
   @tag4
-  Scenario: entre com a senha 
-    Given entrei com o numero 0
-    When ao pressionar numero
-    Then verifica se porta fechada
-     And diplay 0            
-     
+  Scenario: teste digitar senha com menos de seis 
+    Given entrei com numero 1
+    When eu pressionei destravar
+    Then verifica se senha com de seis
+     And mensagem "senha precisa de 6 digitos. Tente novamente" deve aparecer    
+    
   @tag5
-  Scenario: gravar senha valida porta fechada destravada 
-    Given entrei com o numero 193566
-    When eu pressionei ok
-    Then senha salva. cofre trancado
-    And verficar portar travada
-    And salvar senha
-    
-    
+  Scenario: teste digitar senha com menos de seis 
+    Given entrei com numero 11
+    When eu pressionei destravar
+    Then verifica se senha com de seis
+     And mensagem "senha precisa de 6 digitos. Tente novamente" deve aparecer
+
   @tag6
-  Scenario: digitar senha com menos de seis 
-    Given entrei com o numero 1
-    When eu pressionei ok
-    Then senha precisa de 6 digitos. tente novamente
+  Scenario: testar display 
+    Given entrei com numero 1
+    When eu pressionei destravar
+    Then mostra no display
+    And mensagem "1" deve aparecer
          
   @tag7
-  Scenario: digitar numeros porta fechada e depois abrir e digitar 
-    Given entrei com o numero 98
-    When eu pressionei ok
-    Then abrir porta
+  Scenario: testar display 
+    Given entrei com numero 11
+    When eu pressionei destravar
+    Then mostra no display
+    And mensagem "11" deve aparecer
          
+  @tag8
+  Scenario: teste digitar numeros 
+    Given entrei com numero 98
+    When eu pressionei destravar
+    Then teste digitar numeros 
+    And mensagem "98" deve aparecer
+    
+  @tag9
+  Scenario: teste digitar numeros porta fechada
+    Given entrei com numero 98
+    When eu pressionei destravar
+    Then teste digitar numeros porta fechada
+    And mensagem "Feche a porta antes de digitar a senha" deve aparecer
+    
+  @tag10
+  Scenario: teste digitar numeros porta fechada e depois abrir e digitar
+    Given entrei com numero 7
+    When eu pressionei destravar
+    Then teste digitar numeros porta fechada e depois abrir e digitar
+    And mensagem "7" deve aparecer 
+     
+  @tag11
+  Scenario: clear
+    Given limpar
+    When clear
+    Then limpa cofre
+    And mensagem "" deve aparecer         

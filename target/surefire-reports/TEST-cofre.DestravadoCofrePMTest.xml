@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="7" failures="0" name="cofre.DestravadoCofrePMTest" time="1.03" errors="0" skipped="0">
+<testsuite tests="7" failures="0" name="cofre.DestravadoCofrePMTest" time="0.723" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_111\jre\bin"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Mestrado\CofreExemplo"/>
+    <property name="user.dir" value="C:\Mestrado\CofreExemplo\atividade008"/>
     <property name="java.runtime.version" value="1.8.0_111-b14"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_111\jre\lib\endorsed"/>
@@ -61,11 +61,11 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="cofre.DestravadoCofrePMTest" name="testDigitarSenhaComMenosDeSeis" time="0.678"/>
+  <testcase classname="cofre.DestravadoCofrePMTest" name="testDigitarSenhaComMenosDeSeis" time="0.455"/>
   <testcase classname="cofre.DestravadoCofrePMTest" name="testClear" time="0"/>
-  <testcase classname="cofre.DestravadoCofrePMTest" name="testGravarSenhaValidaPortaFechadaDestravada" time="0.027"/>
-  <testcase classname="cofre.DestravadoCofrePMTest" name="testDigitarNumerosPortaFechadaEDepoisAbrirEDigitar" time="0.004"/>
+  <testcase classname="cofre.DestravadoCofrePMTest" name="testGravarSenhaValidaPortaFechadaDestravada" time="0.026"/>
+  <testcase classname="cofre.DestravadoCofrePMTest" name="testDigitarNumerosPortaFechadaEDepoisAbrirEDigitar" time="0.005"/>
   <testcase classname="cofre.DestravadoCofrePMTest" name="testPortaNaoFechada" time="0.003"/>
-  <testcase classname="cofre.DestravadoCofrePMTest" name="testDigitarUmNumeroPortaFechada" time="0.002"/>
-  <testcase classname="cofre.DestravadoCofrePMTest" name="testInicializacao" time="0.001"/>
+  <testcase classname="cofre.DestravadoCofrePMTest" name="testDigitarUmNumeroPortaFechada" time="0.003"/>
+  <testcase classname="cofre.DestravadoCofrePMTest" name="testInicializacao" time="0"/>
 </testsuite>
